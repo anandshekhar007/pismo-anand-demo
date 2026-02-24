@@ -36,15 +36,13 @@ public class TransactionService {
             return Optional.empty();
         }
 
-        // Normalize amount sign according to operation type rules:
-        // - operation types 1,2,3 (purchases, installments, withdrawal) should be negative
-        // - operation type 4 (credit voucher) should be positive
+
         double normalizedAmount = (amount == null) ? 0.0 : amount.doubleValue();
         if (operationTypeId == 4) {
-            // credit voucher -> positive
+
             normalizedAmount = Math.abs(normalizedAmount);
         } else {
-            // purchases / withdrawal / installments -> negative
+
             normalizedAmount = -Math.abs(normalizedAmount);
         }
 
