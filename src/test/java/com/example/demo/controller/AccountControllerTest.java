@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.example.demo.controller;
 
-import com.example.demo.controller.AccountController;
 import com.example.demo.dto.AccountRequest;
 import com.example.demo.model.Account;
 import com.example.demo.service.AccountService;
@@ -32,6 +31,7 @@ class AccountControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+
     @Test
     void createAccount_shouldReturn200_whenAccountCreated() throws Exception {
 
@@ -59,5 +59,6 @@ class AccountControllerTest {
 
         mockMvc.perform(get("/accounts/99"))
                 .andExpect(status().isNotFound());
+
     }
 }

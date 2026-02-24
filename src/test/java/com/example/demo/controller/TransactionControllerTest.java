@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.example.demo.controller;
 
-import com.example.demo.controller.TransactionController;
 import com.example.demo.dto.TransactionRequest;
 import com.example.demo.model.*;
 import com.example.demo.service.TransactionService;
