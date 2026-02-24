@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<!-- Use a supported Java version for Spring Boot 4 -->
+
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
